@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         cityTextField.delegate = self
+        weatherAPIManager.delegate = self
     }
 
     @IBAction func locationButtonPressed(_ sender: UIButton) {
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     
     
 }
+
+// MARK: - UITextFieldDelegate
 
 extension ViewController: UITextFieldDelegate {
     
@@ -55,6 +58,17 @@ extension ViewController: UITextFieldDelegate {
         }
         
         cityTextField.text = ""
+    }
+}
+
+// MARK: - WeatherAPIManagerDelegate
+extension ViewController: WeatherAPIManagerDelegate {
+    func didUpdateWeather(_ weatherAPIManager: WeatherAPIManager, weather: WeatherViewModel) {
+        print(weather)
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }
 

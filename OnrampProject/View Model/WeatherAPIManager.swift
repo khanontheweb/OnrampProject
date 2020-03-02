@@ -9,7 +9,6 @@ import Foundation
 
 protocol WeatherAPIManagerDelegate {
     func didUpdateWeather(_ weatherAPIManager: WeatherAPIManager, weather: WeatherViewModel)
-    
     func didFailWithError(error: Error)
 }
 
@@ -34,14 +33,13 @@ struct WeatherAPIManager {
                 }
                 if let validData = data {
                     if let weather = self.parseJSON(validData) {
-                        print(weather)
+                        self.delegate?.didUpdateWeather(self, weather: weather)
                     }
                 }
             }
             task.resume()
         }
     }
-    
     
     func parseJSON(_ weatherData: Data) -> WeatherViewModel? {
         let decoder = JSONDecoder()
@@ -54,9 +52,4 @@ struct WeatherAPIManager {
             return nil
         }
     }
-    
-    
-    
-    
-    
 }
