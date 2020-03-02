@@ -104,6 +104,15 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		3C44184C240D9D35006B6E34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6030FC7523FF0C79007F0901 /* Main.storyboard */,
+				6030FC7A23FF0C7A007F0901 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6030FC6323FF0C79007F0901 = {
 			isa = PBXGroup;
 			children = (
@@ -127,14 +136,13 @@
 		6030FC6E23FF0C79007F0901 /* OnrampProject */ = {
 			isa = PBXGroup;
 			children = (
+				3C44184C240D9D35006B6E34 /* View */,
 				3C441844240D8D1E006B6E34 /* View Model */,
 				3C441843240D8D12006B6E34 /* Controller */,
 				3C441842240D8D0A006B6E34 /* Model */,
 				6030FC6F23FF0C79007F0901 /* AppDelegate.swift */,
 				6030FC7123FF0C79007F0901 /* SceneDelegate.swift */,
-				6030FC7523FF0C79007F0901 /* Main.storyboard */,
 				6030FC7823FF0C7A007F0901 /* Assets.xcassets */,
-				6030FC7A23FF0C7A007F0901 /* LaunchScreen.storyboard */,
 				6030FC7D23FF0C7A007F0901 /* Info.plist */,
 			);
 			path = OnrampProject;
