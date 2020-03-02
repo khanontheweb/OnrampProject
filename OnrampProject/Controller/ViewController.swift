@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var cityLabel: UILabel!
     
+    var weatherAPIManager = WeatherAPIManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -49,12 +51,11 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = cityTextField.text {
-            print(city)
+            weatherAPIManager.fetchWeather(cityName: city)
         }
         
         cityTextField.text = ""
     }
-    
-    
 }
+
 
