@@ -10,6 +10,7 @@
 		3C441846240D8DD2006B6E34 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C441845240D8DD2006B6E34 /* WeatherModel.swift */; };
 		3C441848240D8DE2006B6E34 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C441847240D8DE2006B6E34 /* WeatherViewModel.swift */; };
 		3C44184E240DA3A1006B6E34 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3C44184D240DA3A1006B6E34 /* dark_background.pdf */; };
+		3C441850240DA839006B6E34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C44184F240DA839006B6E34 /* README.md */; };
 		6030FC7023FF0C79007F0901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6030FC6F23FF0C79007F0901 /* AppDelegate.swift */; };
 		6030FC7223FF0C79007F0901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6030FC7123FF0C79007F0901 /* SceneDelegate.swift */; };
 		6030FC7423FF0C79007F0901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6030FC7323FF0C79007F0901 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		3C441845240D8DD2006B6E34 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		3C441847240D8DE2006B6E34 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		3C44184D240DA3A1006B6E34 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
+		3C44184F240DA839006B6E34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6030FC6C23FF0C79007F0901 /* OnrampProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnrampProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6030FC6F23FF0C79007F0901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6030FC7123FF0C79007F0901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		6030FC6323FF0C79007F0901 = {
 			isa = PBXGroup;
 			children = (
+				3C44184F240DA839006B6E34 /* README.md */,
 				6030FC6E23FF0C79007F0901 /* OnrampProject */,
 				6030FC8523FF0C7A007F0901 /* OnrampProjectTests */,
 				6030FC9023FF0C7A007F0901 /* OnrampProjectUITests */,
@@ -274,6 +277,7 @@
 			files = (
 				3C44184E240DA3A1006B6E34 /* dark_background.pdf in Resources */,
 				6030FC7C23FF0C7A007F0901 /* LaunchScreen.storyboard in Resources */,
+				3C441850240DA839006B6E34 /* README.md in Resources */,
 				6030FC7923FF0C7A007F0901 /* Assets.xcassets in Resources */,
 				6030FC7723FF0C79007F0901 /* Main.storyboard in Resources */,
 			);
