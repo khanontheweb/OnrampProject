@@ -64,7 +64,11 @@ extension ViewController: UITextFieldDelegate {
 // MARK: - WeatherAPIManagerDelegate
 extension ViewController: WeatherAPIManagerDelegate {
     func didUpdateWeather(_ weatherAPIManager: WeatherAPIManager, weather: WeatherViewModel) {
-        print(weather)
+        DispatchQueue.main.async {
+            self.weatherConditionImage.image = UIImage(systemName: weather.conditionName)
+            self.cityLabel.text = weather.cityName
+            self.temperatureLabel.text = weather.temperatureString
+        }
     }
     
     func didFailWithError(error: Error) {
