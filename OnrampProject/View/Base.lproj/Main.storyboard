@@ -18,11 +18,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="C4d-W1-2yg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="POl-a2-q33">
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="POl-a2-q33">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-N7-biQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-N7-biQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PI8-1I-da2">
                                                 <rect key="frame" x="0.0" y="0.5" width="40" height="39"/>
@@ -38,7 +38,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmW-gJ-C7K">
-                                                <rect key="frame" x="50" y="0.0" width="274" height="38"/>
+                                                <rect key="frame" x="50" y="0.0" width="274" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -59,7 +59,7 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-7v-41i">
-                                        <rect key="frame" x="254" y="68.5" width="120" height="121.5"/>
+                                        <rect key="frame" x="254" y="50" width="120" height="121.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="MQL-ht-8Nb"/>
@@ -67,7 +67,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13w-Q0-bal">
-                                        <rect key="frame" x="173" y="198.5" width="201" height="119.5"/>
+                                        <rect key="frame" x="173" y="180" width="201" height="119.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-ap-OU8">
                                                 <rect key="frame" x="0.0" y="0.0" width="107.5" height="119.5"/>
@@ -90,13 +90,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atlanta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcw-G3-4yt">
-                                        <rect key="frame" x="283" y="328" width="91" height="36"/>
+                                        <rect key="frame" x="283" y="309.5" width="91" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeO-sV-CVy">
-                                        <rect key="frame" x="134" y="374" width="240" height="444"/>
+                                        <rect key="frame" x="0.0" y="355.5" width="374" height="462.5"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -113,16 +113,16 @@
                             <constraint firstItem="POl-a2-q33" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZNr-Um-gr4"/>
                             <constraint firstItem="POl-a2-q33" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="bac-rL-Vpz"/>
                             <constraint firstItem="POl-a2-q33" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cN0-NH-luK"/>
-                            <constraint firstItem="POl-a2-q33" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kHA-ke-I2n"/>
+                            <constraint firstItem="POl-a2-q33" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kHA-ke-I2n"/>
                             <constraint firstItem="C4d-W1-2yg" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="oJa-cC-qT7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cityLabel" destination="zcw-G3-4yt" id="tJr-il-QgS"/>
+                        <outlet property="cityLabel" destination="zcw-G3-4yt" id="ckJ-F1-WJm"/>
                         <outlet property="cityTextField" destination="BmW-gJ-C7K" id="2NG-8a-B2v"/>
-                        <outlet property="temperatureLabel" destination="rz9-ap-OU8" id="VfJ-QC-sQs"/>
-                        <outlet property="weatherConditionImage" destination="DfT-7v-41i" id="S0I-oD-Xbc"/>
+                        <outlet property="temperatureLabel" destination="rz9-ap-OU8" id="o1D-oi-0d3"/>
+                        <outlet property="weatherConditionImage" destination="DfT-7v-41i" id="QzG-bv-RKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
