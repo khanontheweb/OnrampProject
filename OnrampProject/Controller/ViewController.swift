@@ -9,11 +9,13 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var weatherConditionImage: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var cityLabel: UILabel!
+    
+    let defaults = UserDefaults.standard
     
     var weatherAPIManager = WeatherAPIManager()
     var locationManager = CLLocationManager()
@@ -26,6 +28,18 @@ class ViewController: UIViewController {
         locationManager.requestLocation()
         cityTextField.delegate = self
         weatherAPIManager.delegate = self
+    }
+    
+    @IBAction func saveCityPressed(_ sender: Any) {
+        let lastCity = self.defaults.string(forKey: "LastCity")
+        if var savedCities = self.defaults.array(forKey: "Cities"){
+            savedCities.append(lastCity!)
+            self.defaults.set(savedCities, forKey: "Cities")
+        } else {
+            self.defaults.set([lastCity], forKey: "Cities")
+        }
+        
+        print(self.defaults.array(forKey: "Cities")!)
     }
     
 }
@@ -69,6 +83,8 @@ extension ViewController: WeatherAPIManagerDelegate {
             self.weatherConditionImage.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
             self.temperatureLabel.text = weather.temperatureString
+            
+            self.defaults.set(weather.cityName, forKey:"LastCity")
         }
     }
     
