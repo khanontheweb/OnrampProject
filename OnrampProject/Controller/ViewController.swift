@@ -27,11 +27,6 @@ class ViewController: UIViewController {
         cityTextField.delegate = self
         weatherAPIManager.delegate = self
     }
-
-    @IBAction func locationButtonPressed(_ sender: UIButton) {
-        
-    }
-    
     
 }
 
@@ -84,6 +79,10 @@ extension ViewController: WeatherAPIManagerDelegate {
 
 // MARK: - CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
+    
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
