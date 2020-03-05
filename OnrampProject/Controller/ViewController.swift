@@ -33,8 +33,10 @@ class ViewController: UIViewController {
     @IBAction func saveCityPressed(_ sender: Any) {
         let lastCity = self.defaults.string(forKey: "LastCity")
         if var savedCities = self.defaults.array(forKey: "Cities"){
-            savedCities.append(lastCity!)
-            self.defaults.set(savedCities, forKey: "Cities")
+            if(!(savedCities as! [String]).contains(lastCity!)) {
+                savedCities.append(lastCity!)
+                self.defaults.set(savedCities, forKey: "Cities")
+            }
         } else {
             self.defaults.set([lastCity], forKey: "Cities")
         }
