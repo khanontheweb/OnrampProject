@@ -16,7 +16,10 @@ class SavedWeatherViewController: UITableViewController {
         super.viewDidLoad()
         weatherAPIManager.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(reloadList), name: NSNotification.Name(rawValue: "reload"), object: nil)
-        loadCitiesWeather()
+        if(UserDefaults.standard.array(forKey: "Cities") != nil) {
+            loadCitiesWeather()
+        }
+        
     }
     
     // MARK: - Populate Tableview
