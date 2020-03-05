@@ -46,9 +46,17 @@ class SavedWeatherViewController: UITableViewController {
     
     @objc func reloadList(notification: NSNotification) {
         loadCitiesWeather()
-        
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            weatherViewModels.remove(at: indexPath.row)
+            var cities = UserDefaults.standard.array(forKey: "Cities") as! [String]
+            cities.remove(at: indexPath.row)
+            UserDefaults.standard.set(cities, forKey: "Cities")
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
 }
 
 extension SavedWeatherViewController: WeatherAPIManagerDelegate {
