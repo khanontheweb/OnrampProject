@@ -71,13 +71,16 @@ The OpenWeatherMap (insert link here) API was used. You can find calls to this A
 User's last location search is saved as well as any locations the user has chosen to save. These locations are stored in an array of Strings. When the user switches to the table view, the cells are populated with API calls using that array of strings as input for each API call.
 
 ## Screenshots of each View and descriptions of the overall user flow
-1. Launch. The launch screen shows the same background as the initial storyboard to make a nice transition.
+### Launch
+The launch screen shows the same background as the initial storyboard to make a nice transition.
 ![Launch Screen](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Launch%20Screen.png)
-2. Search View. Here the user will be prompted to allow the app access to their location, if they have not already. Once they do, the app will display the current weather of the current location. The user can also search up a city and hit enter or the search button to enter their input. They can also get info on their current location by clicking the locaiotn buton. The user can press the "+" buton to save the location that is currently being displayed.
-![Location Promptt](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Location%20Alert.png)
+### Search View 
+Here the user will be prompted to allow the app access to their location, if they have not already. Once they do, the app will display the current weather of the current location. The user can also search up a city and hit enter or the search button to enter their input. They can also get info on their current location by clicking the locaiotn buton. The user can press the "+" buton to save the location that is currently being displayed.
+![Location Prompt](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Location%20Alert.png)
 ![Search View](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Search%20View.png)
 ![Search View Text Field](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Search%20Text%20Field%20View.png)
-3. Saved View. The user can use the tab bar to switch to see the current weather data of the locations they have saved. They can slide to reveal a delete button in the table, or continue sliding to delete the item. This removes it from the table and deletes it from the UserDefaults.
+### Saved View
+The user can use the tab bar to switch to see the current weather data of the locations they have saved. They can slide to reveal a delete button in the table, or continue sliding to delete the item. This removes it from the table and deletes it from the UserDefaults.
 ![Populated Table](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Populated%20Saved%20Weather%20View.png)
 ![Delete Button](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Slide%20for%20Delete%20Button.png)
 ![Slide Delete](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Slide%20to%20Delete.png)
