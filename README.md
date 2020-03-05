@@ -71,6 +71,10 @@ The OpenWeatherMap (insert link here) API was used. You can find calls to this A
 User's last location search is saved as well as any locations the user has chosen to save. These locations are stored in an array of Strings. When the user switches to the table view, the cells are populated with API calls using that array of strings as input for each API call.
 
 ## Screenshots of each View and descriptions of the overall user flow
+1. Launch. The launch screen shows the same background as the initial storyboard to make a nice transition.
+![Launch Screen](https://github.com/khanontheweb/OnrampProject/blob/master/Screenshots/Launch%20Screen.png)
+2. Search View. Here the user will be prompted to allow the app access to their location, if they have not already. Once they do, the app will display the current weather of the current location. The user can also search up a city and hit enter or the search button to enter their input. They can also get info on their current location by clicking the locaiotn buton.
+![Location Promptt](
 
 
 

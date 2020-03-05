@@ -15,6 +15,7 @@
 		3C39AFED24119992006FA495 /* Search View.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C39AFE624119992006FA495 /* Search View.png */; };
 		3C39AFEE24119992006FA495 /* Search Text Field View.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C39AFE724119992006FA495 /* Search Text Field View.png */; };
 		3C39AFEF24119992006FA495 /* Launch Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C39AFE824119992006FA495 /* Launch Screen.png */; };
+		3C39AFF12411A1AB006FA495 /* Location Alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C39AFF02411A1AB006FA495 /* Location Alert.png */; };
 		3C441846240D8DD2006B6E34 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C441845240D8DD2006B6E34 /* WeatherModel.swift */; };
 		3C441848240D8DE2006B6E34 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C441847240D8DE2006B6E34 /* WeatherViewModel.swift */; };
 		3C44184E240DA3A1006B6E34 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3C44184D240DA3A1006B6E34 /* dark_background.pdf */; };
@@ -57,6 +58,7 @@
 		3C39AFE624119992006FA495 /* Search View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search View.png"; sourceTree = "<group>"; };
 		3C39AFE724119992006FA495 /* Search Text Field View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search Text Field View.png"; sourceTree = "<group>"; };
 		3C39AFE824119992006FA495 /* Launch Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Screen.png"; sourceTree = "<group>"; };
+		3C39AFF02411A1AB006FA495 /* Location Alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Location Alert.png"; sourceTree = "<group>"; };
 		3C441845240D8DD2006B6E34 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		3C441847240D8DE2006B6E34 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		3C44184D240DA3A1006B6E34 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		3C39AFE12411996B006FA495 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				3C39AFF02411A1AB006FA495 /* Location Alert.png */,
 				3C39AFE424119992006FA495 /* Empty Saved Weather View.png */,
 				3C39AFE824119992006FA495 /* Launch Screen.png */,
 				3C39AFE224119991006FA495 /* Populated Saved Weather View.png */,
@@ -321,6 +324,7 @@
 				3C39AFED24119992006FA495 /* Search View.png in Resources */,
 				3C39AFEB24119992006FA495 /* Empty Saved Weather View.png in Resources */,
 				6030FC7923FF0C7A007F0901 /* Assets.xcassets in Resources */,
+				3C39AFF12411A1AB006FA495 /* Location Alert.png in Resources */,
 				3C39AFEE24119992006FA495 /* Search Text Field View.png in Resources */,
 				3C39AFE924119992006FA495 /* Populated Saved Weather View.png in Resources */,
 				6030FC7723FF0C79007F0901 /* Main.storyboard in Resources */,
