@@ -27,16 +27,15 @@ class SavedWeatherViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath)
         
-        //let cityString = UserDefaults.standard.array(forKey: "Cities")![indexPath.row] as! String
         let weatherViewModel = weatherViewModels[indexPath.row]
-        let title = cell.detailTextLabel
-        let subtitle = cell.textLabel
+        let subtitle = cell.detailTextLabel
+        let title = cell.textLabel
         let image = cell.imageView
+        
         subtitle?.text = "\(weatherViewModel.temperatureString)°F"
-        subtitle?.textColor = UIColor.white
         title?.text = weatherViewModel.cityName
-        title?.textColor = UIColor.white
         image?.image = UIImage(systemName: weatherViewModel.conditionName)
+        
         
         
         return cell
@@ -44,7 +43,7 @@ class SavedWeatherViewController: UITableViewController {
     
     @objc func reloadList(notification: NSNotification) {
         loadCitiesWeather()
-        //self.tableView.reloadData()
+        
     }
     
 }
@@ -64,7 +63,6 @@ extension SavedWeatherViewController: WeatherAPIManagerDelegate {
         DispatchQueue.main.async {
             //if the userdefault array doesnt have this one then add it
             self.weatherViewModels.append(weather)
-            print(self.weatherViewModels.count)
             self.tableView.reloadData()
         }
         

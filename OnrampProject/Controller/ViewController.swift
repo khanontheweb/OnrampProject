@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             self.defaults.set([lastCity], forKey: "Cities")
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload"), object: nil)
-        print(self.defaults.array(forKey: "Cities")!)
+        
     }
     
 }
