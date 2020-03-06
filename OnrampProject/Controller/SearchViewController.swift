@@ -31,17 +31,17 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func saveCityPressed(_ sender: Any) {
-        let lastCity = self.defaults.string(forKey: "LastCity")
-        if var savedCities = self.defaults.array(forKey: "Cities"){
-            if(!(savedCities as! [String]).contains(lastCity!)) {
-                savedCities.append(lastCity!)
-                self.defaults.set(savedCities, forKey: "Cities")
+        if let lastCity = self.defaults.string(forKey: "LastCity"){
+            if var savedCities = self.defaults.array(forKey: "Cities"){
+                if(!(savedCities as! [String]).contains(lastCity)) {
+                    savedCities.append(lastCity)
+                    self.defaults.set(savedCities, forKey: "Cities")
+                }
+            } else {
+                self.defaults.set([lastCity], forKey: "Cities")
             }
-        } else {
-            self.defaults.set([lastCity], forKey: "Cities")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload"), object: nil)
         }
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload"), object: nil)
-        
     }
     
 }
@@ -112,6 +112,18 @@ extension SearchViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        let alert = UIAlertController(title: "No Location Access", message: "Please go to setings to allow Weather authorization when in use", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+            //What happens when the user clicks the Add Item button on our UIAlert
+            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .default) { (action) in
+            //What happens when the user clicks the Add Item button on our UIAlert
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(settingsAction)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
         print(error)
     }
 }
