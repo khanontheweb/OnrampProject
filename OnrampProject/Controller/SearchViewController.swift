@@ -130,6 +130,7 @@ extension SearchViewController: CLLocationManagerDelegate {
         alert.addAction(settingsAction)
         alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)
+        print(error)
     }
 }
 
